@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bandi Pavan Chaitanya | Python Full Stack Developer</title>
+<meta name="description" content="Portfolio of Bandi Pavan Chaitanya, Python Full Stack Developer and AWS Certified Cloud Practitioner.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#fafbfc;--surface:#fff;--text:#0f172a;--muted:#556070;--accent:#2563eb;--accent-soft:#e8f0fe;--border:#e2e8f0;--shadow:0 1px 2px rgba(15,23,42,.05),0 4px 16px rgba(15,23,42,.04);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0b1120;--surface:#111a2e;--text:#e8edf7;--muted:#9aa7bd;--accent:#6ea0ff;--accent-soft:#16264a;--border:#22304d;--shadow:none}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0b1120;--surface:#111a2e;--text:#e8edf7;--muted:#9aa7bd;--accent:#6ea0ff;--accent-soft:#16264a;--border:#22304d;--shadow:none}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.brand{font-weight:700;color:var(--text);letter-spacing:-.01em}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;overflow-x:auto}
+nav ul a{color:var(--muted);font-size:.9rem;font-weight:500;white-space:nowrap}
+nav ul a:hover{color:var(--accent)}
+.hero{padding:88px 0 56px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.avatar{width:132px;height:132px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#7c3aed);color:#fff;display:flex;align-items:center;justify-content:center;font-size:2.6rem;font-weight:700;box-shadow:var(--shadow)}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:5px 12px;border-radius:99px;margin-bottom:16px}
+h1{font-size:clamp(2.1rem,6vw,3.2rem);line-height:1.1;letter-spacing:-.03em;margin:0 0 12px}
+.sub{font-size:1.2rem;color:var(--muted);margin:0 0 20px;font-weight:500}
+.lead{color:var(--muted);max-width:600px;margin:0}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;padding:11px 20px;border-radius:10px;font-weight:600;font-size:.92rem;border:1px solid var(--border);background:var(--surface);color:var(--text)}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{color:#fff;opacity:.9}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:8px}
+.fact{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow)}
+.fact b{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:4px}
+section{padding:56px 0 8px}
+h2{font-size:1.6rem;letter-spacing:-.02em;margin:0 0 6px}
+.kicker{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.card h3{margin:0 0 8px;font-size:1.08rem}
+.card p{margin:0 0 16px;color:var(--muted);font-size:.95rem}
+.card .tags{margin-top:auto}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{font-size:.78rem;font-weight:500;padding:4px 11px;border-radius:99px;background:var(--accent-soft);color:var(--accent)}
+.meta{font-size:.82rem;color:var(--muted);margin-bottom:6px;font-weight:500}
+ul.clean{margin:0;padding:0;list-style:none}
+ul.clean li{padding:7px 0;border-bottom:1px solid var(--border);color:var(--muted);font-size:.95rem}
+ul.clean li:last-child{border:0}
+ul.clean li::before{content:"✓";color:var(--accent);font-weight:700;margin-right:10px}
+.contact{text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:48px 24px;box-shadow:var(--shadow)}
+.contact p{color:var(--muted);max-width:480px;margin:8px auto 24px}
+.contact .actions{justify-content:center;margin:0}
+footer{padding:40px 0;text-align:center;color:var(--muted);font-size:.85rem}
+@media(max-width:700px){.hero{grid-template-columns:1fr;padding-top:56px}.avatar{order:-1;width:96px;height:96px;font-size:2rem}nav ul{gap:16px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="#top">Pavan Chaitanya</a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<main class="wrap" id="top">
+  <div class="hero">
+    <div>
+      <span class="eyebrow">Open to opportunities</span>
+      <h1>Bandi Pavan Chaitanya</h1>
+      <p class="sub">Python Full Stack Developer · AWS Certified Cloud Practitioner</p>
+      <p class="lead">I build reliable web applications and ML-powered tools, with a strong interest in cloud and backend architecture.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://www.linkedin.com/in/pavan-chaitanya-bandi-335a0b300">Connect on LinkedIn</a>
+        <a class="btn" href="https://github.com/Pavan-pavi">View GitHub</a>
+        <a class="btn" href="mailto:bandipavanchaitanya@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="avatar" aria-hidden="true">BP</div>
+  </div>
+
+  <div class="facts">
+    <div class="fact"><b>Location</b>Hyderabad, India</div>
+    <div class="fact"><b>Degree</b>B.Tech CSE (AI &amp; ML), 2026</div>
+    <div class="fact"><b>Focus</b>Python Full Stack, AWS</div>
+  </div>
+
+  <section id="about">
+    <h2>About</h2>
+    <p class="kicker">A quick introduction</p>
+    <div class="card">
+      <p style="margin:0;color:var(--text)">I recently graduated in Computer Science and Engineering with a specialization in AI and Machine Learning, and I am now training as a full stack developer in Hyderabad. My work spans web development with Node.js and Python, machine learning projects, and cloud services on AWS including EC2, S3, Lambda, DynamoDB, SNS, RDS and VPC. I enjoy turning ideas into working products and I am looking for a role where I can keep growing as an engineer.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="kicker">Selected work across web, cloud and machine learning</p>
+    <div class="grid">
+      <div class="card">
+        <div class="meta">Full stack · Cloud</div>
+        <h3>TRAVEL-GO</h3>
+        <p>A bus ticket booking web application. I contributed to both the frontend and backend, storing data in DynamoDB and sending notifications with AWS SNS.</p>
+        <div class="tags"><span class="tag">Node.js</span><span class="tag">DynamoDB</span><span class="tag">AWS SNS</span><span class="tag">Bootstrap</span><span class="tag">JavaScript</span></div>
+      </div>
+      <div class="card">
+        <div class="meta">Machine learning · Team of 4</div>
+        <h3>Wind Turbine Energy Prediction</h3>
+        <p>Final-year project that predicts turbine energy output from weather data. I was responsible for data preprocessing and helped build the models.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">scikit-learn</span><span class="tag">XGBoost</span><span class="tag">Flask</span></div>
+      </div>
+      <div class="card">
+        <div class="meta">Deep learning</div>
+        <h3>HematoVision</h3>
+        <p>A blood cell classification model built with transfer learning on MobileNetV2.</p>
+        <div class="tags"><span class="tag">MobileNetV2</span><span class="tag">Transfer learning</span><span class="tag">Python</span></div>
+      </div>
+      <div class="card">
+        <div class="meta">AI · Web application</div>
+        <h3>AI Interview Practice App</h3>
+        <p>A web application that helps candidates rehearse interviews with AI-generated questions and feedback.</p>
+        <div class="tags"><span class="tag">AI</span><span class="tag">Web app</span></div>
+      </div>
+    </div>
+    <p style="margin-top:20px"><a href="https://github.com/Pavan-pavi?tab=repositories"><b>See all repositories on GitHub →</b></a></p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p class="kicker">Tools and technologies I work with</p>
+    <div class="grid">
+      <div class="card"><h3>Languages &amp; Web</h3><div class="tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span><span class="tag">Node.js</span><span class="tag">Flask</span></div></div>
+      <div class="card"><h3>Cloud (AWS)</h3><div class="tags"><span class="tag">EC2</span><span class="tag">S3</span><span class="tag">Lambda</span><span class="tag">DynamoDB</span><span class="tag">SNS</span><span class="tag">RDS</span><span class="tag">VPC</span></div></div>
+      <div class="card"><h3>Data &amp; ML</h3><div class="tags"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">scikit-learn</span><span class="tag">Matplotlib</span><span class="tag">XGBoost</span></div></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education &amp; Certifications</h2>
+    <p class="kicker">Academic background and credentials</p>
+    <div class="grid">
+      <div class="card">
+        <div class="meta">2022 – 2026</div>
+        <h3>B.Tech, Computer Science &amp; Engineering (AI &amp; ML)</h3>
+        <p style="margin:0">Kallam Haranadha Reddy Institute of Technology, Guntur</p>
+      </div>
+      <div class="card">
+        <div class="meta">In progress</div>
+        <h3>Full Stack Developer Training</h3>
+        <p style="margin:0">Vtalent, Hyderabad. Python full stack development.</p>
+      </div>
+      <div class="card">
+        <h3>Certifications</h3>
+        <ul class="clean"><li>AWS Certified Cloud Practitioner</li><li>Salesforce</li><li>IBM</li><li>Cisco</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Let’s work together</h2>
+      <p>I’m looking for full stack, backend and cloud roles. The best way to reach me is by email or LinkedIn.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:bandipavanchaitanya@gmail.com">bandipavanchaitanya@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/pavan-chaitanya-bandi-335a0b300">LinkedIn</a>
+        <a class="btn" href="https://github.com/Pavan-pavi">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© 2026 Bandi Pavan Chaitanya</footer>
+</body>
+</html>
